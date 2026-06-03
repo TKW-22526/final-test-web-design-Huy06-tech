@@ -1,0 +1,433 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #ff7c08;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff7c08;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Thanh tìm kiếm tròn */
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-box input {
+    padding: 0.55rem 2.8rem 0.55rem 1.2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    outline: none;
+    width: 220px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #ff7c08;
+}
+
+.search-icon {
+    position: absolute;
+    right: 4px;
+    background-color: #ff7c08;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #1f2937;
+    position: relative;
+}
+
+/* ==========================================================================
+   3. HERO SECTION (TRANG CHỦ)
+   ========================================================================== */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.badge {
+    background-color: #fff3e7;
+    color: #ff7c08;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero-content h1 {
+    font-size: 3.75rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1.25rem;
+}
+
+.hero-content h1 .green-text { color: #10b981; }
+.hero-content h1 .orange-text { color: #ff7c08; }
+
+.hero-content p {
+    color: #6b7280;
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-bottom: 2.25rem;
+}
+
+.btn-shop-now {
+    display: inline-block;
+    background: #ff7c08;
+    color: white;
+    padding: 0.75rem 2.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 124, 8, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-shop-now:hover {
+    background-color: #e06900;
+    transform: translateY(-1px);
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   4. CẤU TRÚC DANH MỤC & DANH SÁCH SẢN PHẨM (SAN-PHAM.HTML)
+   ========================================================================== */
+.main-wrapper {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 2rem;
+    min-height: 65vh;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Hệ thống Tab giống video */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: #f3f4f6;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: #ff7c08;
+    color: white;
+}
+
+/* Grid sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #e5e7eb;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 0 auto 1.25rem auto;
+    display: block;
+}
+
+.product-card h3 {
+    font-size: 1.05rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-price {
+    color: #ff7c08;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+}
+
+.btn-detail {
+    display: inline-block;
+    border: 1px solid #ff7c08;
+    color: #ff7c08;
+    padding: 0.45rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-detail:hover {
+    background-color: #ff7c08;
+    color: white;
+}
+
+/* ==========================================================================
+   5. TRANG CHI TIẾT SẢN PHẨM (CHI-TIET.HTML)
+   ========================================================================== */
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.detail-img-wrapper {
+    background-color: #f9fafb;
+    border-radius: 16px;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-img-wrapper img {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.detail-info h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.detail-info .category-lbl {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.detail-info .price {
+    font-size: 2rem;
+    color: #ff7c08;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.detail-info p {
+    color: #4b5563;
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================================================
+   6. CÁC TRANG NỘI DUNG TĨNH (GIOI-THIEU / LIEN-HE)
+   ========================================================================== */
+.static-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.static-card h3 {
+    font-size: 1.5rem;
+    color: #111827;
+    margin-bottom: 1.25rem;
+}
+
+.static-card p {
+    color: #4b5563;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+.contact-info-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.contact-info-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.contact-info-list strong {
+    color: #111827;
+    width: 140px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #f3f4f6;
+    color: #6b7280;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+    .hero-content {
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 2.75rem;
+    }
+    .detail-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+}

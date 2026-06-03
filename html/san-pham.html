@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - Grocify</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Gr<span>o</span>cify</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Trang Chủ</a></li>
+                    <li><a href="san-pham.html" class="active">Sản Phẩm</a></li>
+                    <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+                    <li><a href="lien-he.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="search-icon">🔍</button>
+                </div>
+                <button class="icon-btn">❤️</button>
+                <button class="icon-btn">🛍️</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <h2 class="page-title">Sản Phẩm Hữu Cơ Của Chúng Tôi</h2>
+        
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">Tất Cả</button>
+            <button class="tab-btn" data-category="fruits">Trái Cây</button>
+            <button class="tab-btn" data-category="vegetables">Rau Củ Quả</button>
+            <button class="tab-btn" data-category="dairy">Sữa & Bơ</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Grocify Website. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
