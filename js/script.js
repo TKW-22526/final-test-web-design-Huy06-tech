@@ -5,7 +5,7 @@ const products = [
         name: "Táo Xanh Mỹ Nhập Khẩu",
         category: "fruits",
         price: "65.000đ / Kg",
-        image: "https://i.ibb.co/6NGpL9P/apple.png",
+        image: "taoxanh.jpg",
         description: "Táo xanh tươi ngon nhập khẩu trực tiếp từ các nông trại hữu cơ tại Mỹ. Giòn ngọt, mọng nước và giàu Vitamin C, thích hợp cho việc giảm cân và làm sạch khoang miệng."
     },
     {
@@ -13,7 +13,7 @@ const products = [
         name: "Sữa Tươi Tiệt Trùng Nguyên Chất",
         category: "dairy",
         price: "32.000đ / Hộp",
-        image: "https://i.ibb.co/YyYhC2x/milk.png",
+        image: "suatuoi.jpg",
         description: "Sữa tươi tiệt trùng 100% nguyên chất tự nhiên, cung cấp nguồn Canxi dồi dào, vitamin D3 cùng các khoáng chất thiết yếu cho cơ thể khỏe mạnh mỗi ngày."
     },
     {
@@ -21,7 +21,7 @@ const products = [
         name: "Bông Cải Xanh Đà Lạt",
         category: "vegetables",
         price: "45.000đ / Kg",
-        image: "https://i.ibb.co/vYgK6Yt/broccoli.png",
+        image: "bongcaixanh.jpg",
         description: "Bông cải xanh (súp lơ xanh) được canh tác hữu cơ theo tiêu chuẩn VietGAP tại Đà Lạt. Giàu chất xơ, vitamin chống oxy hóa và cực kỳ tươi ngon."
     },
     {
@@ -29,10 +29,407 @@ const products = [
         name: "Cam Vàng Ai Cập Mọng Nước",
         category: "fruits",
         price: "78.000đ / Kg",
-        image: "https://i.ibb.co/ZxrpHfG/orange.png",
+        image: "camvang.jpg",
         description: "Cam vàng nhập khẩu trực tiếp từ Ai Cập, quả to tròn, mọng nước, vị ngọt thanh tự nhiên và hương thơm vô cùng dễ chịu."
+    },
+    {
+        id: 5,
+        name: "Dâu Tây New Zealand",
+        category: "fruits",
+        price: "245.000đ / Hộp",
+        image: "dautay.jpg",
+        description: "Dâu tây giống New Zealand cao cấp, quả đỏ mọng đồng đều, vị chua ngọt hài hòa, hương thơm đặc trưng cuốn hút."
+    },
+    {
+        id: 6,
+        name: "Nho Đen Không Hạt Mỹ",
+        category: "fruits",
+        price: "135.000đ / Kg",
+        image: "nhoden.jpg",
+        description: "Nho đen quả thuôn dài, vỏ mỏng, không hạt, thịt nho săn chắc và có vị ngọt đậm đà."
+    },
+    {
+        id: 7,
+        name: "Chuối Già Nam Mỹ",
+        category: "fruits",
+        price: "35.000đ / Nải",
+        image: "chuoi.jpg",
+        description: "Chuối chín vàng tự nhiên, giàu kali và năng lượng, là thực phẩm tuyệt vời cho người tập thể thao."
+    },
+    {
+        id: 8,
+        name: "Bơ Sáp Đắk Lắk Loại 1",
+        category: "fruits",
+        price: "60.000đ / Kg",
+        image: "bo.jpg",
+        description: "Bơ sáp đặc sản Đắk Lắk, quả già chín đều, thịt bơ vàng ươm, dẻo quánh và béo ngậy."
+    },
+    {
+        id: 9,
+        name: "Xoài Cát Hòa Lộc",
+        category: "fruits",
+        price: "85.000đ / Kg",
+        image: "xoai.jpg",
+        description: "Xoài cát Hòa Lộc chính gốc, vị ngọt lịm thơm lừng, thịt xoài mịn màng không có xơ."
+    },
+    {
+        id: 10,
+        name: "Kiwi Vàng New Zealand",
+        category: "fruits",
+        price: "160.000đ / Kg",
+        image: "kiwi.jpg",
+        description: "Kiwi vàng vị ngọt thanh, hàm lượng vitamin C cao gấp đôi cam, giúp tăng cường sức đề kháng tối đa."
+    },
+    {
+        id: 11,
+        name: "Cà Chua Bi Hữu Cơ",
+        category: "vegetables",
+        price: "38.000đ / Kg",
+        image: "cachua.jpg",
+        description: "Cà chua bi giòn ngọt, chứa nhiều lycopene tốt cho tim mạch, phù hợp ăn sống hoặc làm salad."
+    },
+    {
+        id: 12,
+        name: "Cải Bó Xôi (Rau Bina)",
+        category: "vegetables",
+        price: "29.000đ / Kg",
+        image: "caiboxoi.jpg",
+        description: "Rau bina tươi xanh, giàu sắt và chất xơ, rất tốt cho máu và hệ tiêu hóa của trẻ nhỏ."
+    },
+    {
+        id: 13,
+        name: "Măng Tây Xanh Loại A",
+        category: "vegetables",
+        price: "90.000đ / Kg",
+        image: "mangtay.jpg",
+        description: "Măng tây thân mập, giòn ngọt, chứa nhiều dinh dưỡng quý, cực kỳ ngon khi xào thịt bò."
+    },
+    {
+        id: 14,
+        name: "Ớt Chuông Đà Lạt Đủ Màu",
+        category: "vegetables",
+        price: "55.000đ / Kg",
+        image: "otchuong.jpg",
+        description: "Ớt chuông xanh, đỏ, vàng dày thịt, giòn ngọt không hăng, giàu vitamin A bảo vệ mắt."
+    },
+    {
+        id: 15,
+        name: "Nấm Đùi Gà Tươi",
+        category: "vegetables",
+        price: "42.000đ / Khay",
+        image: "namduiga.jpg",
+        description: "Nấm đùi gà thịt nấm chắc, vị ngọt thanh như thịt gà, thích hợp làm các món lẩu hoặc kho chay."
+    },
+    {
+        id: 16,
+        name: "Khoai Tây Đà Lạt",
+        category: "vegetables",
+        price: "30.000đ / Kg",
+        image: "khoaitay.jpg",
+        description: "Khoai tây vỏ mỏng, ruột vàng, nhiều tinh bột, khi nấu chín có độ bở và thơm bùi tự nhiên."
+    },
+    {
+        id: 17,
+        name: "Cà Rốt Hữu Cơ",
+        category: "vegetables",
+        price: "25.000đ / Kg",
+        image: "carot.jpg",
+        description: "Cà rốt tươi sạch, không thuốc kích thích, màu cam đậm, vị ngọt đậm thích hợp làm nước ép."
+    },
+    {
+        id: 18,
+        name: "Bắp Cải Trắng Khổng Lồ",
+        category: "vegetables",
+        price: "18.000đ / Kg",
+        image: "bapcai.jpg",
+        description: "Bắp cả cuộn chặt, lá trắng xanh dẻo dai, giữ được độ ngọt tự nhiên lâu ngày."
+    },
+    {
+        id: 19,
+        name: "Dưa Leo Baby",
+        category: "vegetables",
+        price: "32.000đ / Kg",
+        image: "dualeo.jpg",
+        description: "Dưa leo nhỏ gọn, ít ruột, giòn tan và nhiều nước, thức quà giải nhiệt tuyệt vời."
+    },
+    {
+        id: 20,
+        name: "Hành Tây Đà Lạt",
+        category: "vegetables",
+        price: "24.000đ / Kg",
+        image: "hanhtay.jpg",
+        description: "Hành tây củ to, ít hăng cay, ngọt dịu khi xào nấu, giúp tăng hương vị cho món ăn."
+    },
+    {
+        id: 21,
+        name: "Sữa Chua Hy Lạp Ít Béo",
+        category: "dairy",
+        price: "45.000đ / Hộp",
+        image: "suachuahylap.jpg",
+        description: "Sữa chua Hy Lạp kết cấu sánh mịn đặc trưng, hàm lượng protein cao, hỗ trợ ăn kiêng hiệu quả."
+    },
+    {
+        id: 22,
+        name: "Phô Mai Cheddar Lát",
+        category: "dairy",
+        price: "68.000đ / Gói",
+        image: "phomai.jpg",
+        description: "Phô mai Cheddar béo ngậy nhập khẩu, tan chảy đều, lý tưởng khi làm hamburger hoặc kẹp bánh mì."
+    },
+    {
+        id: 23,
+        name: "Bơ Thực Vật Tự Nhiên",
+        category: "dairy",
+        price: "39.000đ / Hộp",
+        image: "bo-thuc-vat.jpg",
+        description: "Bơ thực vật thơm béo, không chứa cholesterol xấu, dùng để làm bánh hoặc chiên xào cực đỉnh."
+    },
+    {
+        id: 24,
+        name: "Váng Sữa Monte Nhập Khẩu",
+        category: "dairy",
+        price: "58.000đ / Lốc",
+        image: "vangsua.jpg",
+        description: "Váng sữa thơm ngon béo ngậy hương vani và socola, bổ sung năng lượng dồi dào cho bé yêu."
+    },
+    {
+        id: 25,
+        name: "Sữa Đậu Nành Hữu Cơ Fami",
+        category: "dairy",
+        price: "28.000đ / Lốc",
+        image: "suadaunanh.jpg",
+        description: "Sữa đậu nành chọn lọc từ hạt đậu nành không biến đổi gen, thơm ngon, thanh mát."
+    },
+    {
+        id: 26,
+        name: "Thịt Ba Chỉ Bò Mỹ File",
+        category: "meat",
+        price: "195.000đ / Kg",
+        image: "bachibo.jpg",
+        description: "Ba chỉ bò Mỹ thịt nạc và mỡ xen kẽ lý tưởng, cuộn lại đẹp mắt, chuyên dụng cho món lẩu và nướng."
+    },
+    {
+        id: 27,
+        name: "Thịt Thăn Heo Sinh Học",
+        category: "meat",
+        price: "140.000đ / Kg",
+        image: "thanheo.jpg",
+        description: "Thịt thăn heo nuôi theo công nghệ sinh học, thớ thịt nhỏ mềm, không chứa chất tạo nạc."
+    },
+    {
+        id: 28,
+        name: "Ứg Gà Phi Lê Tươi",
+        category: "meat",
+        price: "85.000đ / Kg",
+        image: "ucga.jpg",
+        description: "Ứg gà loại bỏ da và mỡ, giàu protein tinh khiết, thực phẩm vàng cho gymer và người giảm cân."
+    },
+    {
+        id: 29,
+        name: "Cá Hồi Tươi Na Uy File",
+        category: "meat",
+        price: "450.000đ / Kg",
+        image: "cahoi.jpg",
+        description: "Cá hồi Na Uy nhập khẩu nguyên con được phi lê trong ngày, thịt cam tươi rói, đạt chuẩn ăn sashimi."
+    },
+    {
+        id: 30,
+        name: "Tôm Thẻ Chân Trắng Tươi",
+        category: "meat",
+        price: "210.000đ / Kg",
+        image: "tomthe.jpg",
+        description: "Tôm thẻ đánh bắt tự nhiên, thịt tôm săn chắc, ngọt đậm, vỏ mỏng dễ bóc."
+    },
+    {
+        id: 31,
+        name: "Gạo Lứt Huyết Rồng",
+        category: "grains",
+        price: "45.000đ / Kg",
+        image: "gaolut.jpg",
+        description: "Gạo lứt đỏ nguyên cám giàu dinh dưỡng, hỗ trợ kiểm soát đường huyết và tốt cho tim mạch."
+    },
+    {
+        id: 32,
+        name: "Yến Mạch Úc Nguyên Hạt",
+        category: "grains",
+        price: "75.000đ / Hộp",
+        image: "yenmach.jpg",
+        description: "Yến mạch nguyên cám nhập khẩu từ Úc, giàu chất xơ hòa tan, dùng nấu cháo hoặc làm ngũ cốc ăn sáng."
+    },
+    {
+        id: 33,
+        name: "Hạt Điều Rang Muối Bình Phước",
+        category: "grains",
+        price: "150.000đ / Hộp",
+        image: "hatdieu.jpg",
+        description: "Hạt điều vỏ lụa loại A hạt to, giòn bùi, thơm phức, vị mặn nhẹ vừa ăn."
+    },
+    {
+        id: 34,
+        name: "Mật Ong Rừng Nguyên Chất",
+        category: "grains",
+        price: "220.000đ / Chai",
+        image: "matong.jpg",
+        description: "Mật ong tự nhiên không pha đường, đặc sánh, dùng pha nước ấm thanh lọc cơ thể cực tốt."
+    },
+    {
+        id: 35,
+        name: "Hạt Chia Úc Organic",
+        category: "grains",
+        price: "95.000đ / Gói",
+        image: "hatchia.jpg",
+        description: "Hạt chia giàu hàm lượng Omega-3 và chất xơ, dễ dàng pha chế cùng nước trái cây, sữa chua."
+    },
+    {
+        id: 36,
+        name: "Quả Việt Quất Tươi Mỹ",
+        category: "fruits",
+        price: "85.000đ / Hộp",
+        image: "vietquat.jpg",
+        description: "Việt quất nhập khẩu quả mọng xanh thẫm, chứa chất chống oxy hóa cực cao, bảo vệ tế bào não bộ."
+    },
+    {
+        id: 37,
+        name: "Lê Nâu Hàn Quốc Premium",
+        category: "fruits",
+        price: "99.000đ / Kg",
+        image: "lehanquoc.jpg",
+        description: "Lê Hàn Quốc quả siêu to, nhiều nước, vị ngọt lịm mát rượi, ăn vào giải nhiệt tức thì."
+    },
+    {
+        id: 38,
+        name: "Dưa Lưới Huỳnh Long",
+        category: "fruits",
+        price: "75.000đ / Kg",
+        image: "dualuoi.jpg",
+        description: "Dưa lưới vỏ vàng ruột cam, vân lưới nổi rõ, thịt dưa giòn rụm và ngọt đậm đà."
+    },
+    {
+        id: 39,
+        name: "Súp Lơ Trắng Đà Lạt",
+        category: "vegetables",
+        price: "40.000đ / Kg",
+        image: "suplo.jpg",
+        description: "Súp lơ trắng tươi sạch, bông nấm cuộn chặt không sâu, giàu vitamin C và chất xơ hòa tan."
+    },
+    {
+        id: 40,
+        name: "Cải Thảo Tươi Ngon",
+        category: "vegetables",
+        price: "22.000đ / Kg",
+        image: "caithao.jpg",
+        description: "Cải thảo cuộn bắp chắc chắn, lá trắng ngọt, là nguyên liệu chính không thể thiếu của món kim chi."
+    },
+    {
+        id: 41,
+        name: "Bí Đỏ Hồ Lô",
+        category: "vegetables",
+        price: "28.000đ / Củ",
+        image: "bido.jpg",
+        description: "Bí đỏ hồ lô thịt dày, đặc ruột, dẻo và ngọt bùi, rất tốt cho sự phát triển trí não."
+    },
+    {
+        id: 42,
+        name: "Sữa Tiệt Trùng TH True Milk",
+        category: "dairy",
+        price: "36.000đ / Lốc",
+        image: "sua.jpg",
+        description: "Sữa tươi TH True Milk sạch từ đồng cỏ xanh, giữ trọn vị ngon tinh túy thiên nhiên."
+    },
+    {
+        id: 43,
+        name: "Sữa Hạnh Nhân Không Đường",
+        category: "dairy",
+        price: "65.000đ / Hộp",
+        image: "suahanhnhan.jpg",
+        description: "Sữa hạt hạnh nhân nguyên chất, lượng calo cực thấp, phù hợp cho người ăn chay thuần và ăn kiêng."
+    },
+    {
+        id: 44,
+        name: "Sườn Non Heo Sạch",
+        category: "meat",
+        price: "185.000đ / Kg",
+        image: "suonnon.jpg",
+        description: "Sườn non heo nhiều thịt, xương nhỏ, sụn giòn, làm món sườn xào chua ngọt thì ngon hết ý."
+    },
+    {
+        id: 45,
+        name: "Mực Ống Tươi Côn Đảo",
+        category: "meat",
+        price: "290.000đ / Kg",
+        image: "mucong.jpg",
+        description: "Mực ống cấp đông cấp tốc ngay tại tàu, giữ trọn vị ngọt lịm và độ giòn sần sật bùng nổ."
+    },
+    {
+        id: 46,
+        name: "Hạt Hạnh Nhân Rang Mộc",
+        category: "grains",
+        price: "145.000đ / Hộp",
+        image: "hanhnhan.jpg",
+        description: "Hạnh nhân nhập khẩu Mỹ rang mộc không muối, giàu chất béo tốt và vitamin E chống lão hóa."
+    },
+    {
+        id: 47,
+        name: "Gạo Tám Thơm Điện Biên",
+        category: "grains",
+        price: "32.000đ / Kg",
+        image: "gaotam.jpg",
+        description: "Gạo tám thơm hạt nhỏ đều, khi nấu cho cơm dẻo nhiều, vị đậm và hương thơm nồng nàn."
+    },
+    {
+        id: 48,
+        name: "Đậu Xanh Cà Vỏ Sạch",
+        category: "grains",
+        price: "48.000đ / Gói",
+        image: "dauxanh.jpg",
+        description: "Đậu xanh đã đãi sạch vỏ, hạt mẩy đều, chuyên dùng nấu chè thanh nhiệt hoặc làm nhân bánh."
+    },
+    {
+        id: 49,
+        name: "Nho Xanh Autumn Crisp Mỹ",
+        category: "fruits",
+        price: "180.000đ / Kg",
+        image: "nhoxanh.jpg",
+        description: "Nho xanh thượng hạng, siêu giòn, vị ngọt thanh mát, quả to tròn không hạt cực thích mắt."
+    },
+    {
+        id: 50,
+        name: "Rau Xà Lách Mỹ (Iceberg)",
+        category: "vegetables",
+        price: "35.000đ / Cây",
+        image: "xalach.jpg",
+        description: "Xà lách cuộn tròn như bắp cải, lá siêu giòn và nhiều nước, là linh hồn của các món cuốn và salad sốt."
+    },
+    {
+        id: 51,
+        name: "Lựu Đỏ Ai Cập Nhập Khẩu",
+        category: "fruits",
+        price: "125.000đ / Kg",
+        image: "luudo.jpg",
+        description: "Lựu đỏ Ai Cập quả to, hạt mềm mọng nước, vị ngọt thanh. Đây là loại trái cây cực kỳ giàu chất chống oxy hóa, tốt cho tim mạch và làm đẹp da từ bên trong."
+    },
+    {
+        id: 52,
+        name: "Khoai Lang Mật Đà Lạt",
+        category: "vegetables",
+        price: "45.000đ / Kg",
+        image: "khoailanmat.jpg",
+        description: "Khoai lang mật vùng đất đỏ Đà Lạt, khi nướng hoặc hấp chín sẽ tiết ra lớp mật ngọt lịm, thịt khoai dẻo mềm, màu cam bắt mắt và rất giàu chất xơ."
     }
 ];
+
+
+
+
+function getImageSrc(fileName) {
+    if (!fileName) return '';
+
+    const isAbsolute = /^(?:https?:)?\/\//i.test(fileName);
+    if (isAbsolute) return fileName;
+
+    const basePath = window.location.pathname.includes('/html/') ? '../assets/' : 'assets/';
+    return `${basePath}${fileName}`;
+}
 
 // Khởi tạo các chức năng khi trang tải xong
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,7 +451,7 @@ function renderProducts(productsArray) {
 
     grid.innerHTML = productsArray.map(product => `
         <div class="product-card" onclick="goToDetail(${product.id})">
-            <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/150'">
+            <img src="${getImageSrc(product.image)}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/150'">
             <h3>${product.name}</h3>
             <div class="product-price">${product.price}</div>
             <a href="javascript:void(0)" class="btn-detail">Xem chi tiết</a>
@@ -144,7 +541,7 @@ function loadProductDetail() {
         document.getElementById('det-category').innerText = `Danh mục: ${displayCategory}`;
         document.getElementById('det-price').innerText = product.price;
         document.getElementById('det-desc').innerText = product.description;
-        document.getElementById('det-img').src = product.image;
+        document.getElementById('det-img').src = getImageSrc(product.image);
         document.getElementById('det-img').alt = product.name;
     } else {
         document.getElementById('detail-wrapper').innerHTML = `
