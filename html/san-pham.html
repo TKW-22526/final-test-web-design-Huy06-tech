@@ -40,7 +40,32 @@
             <button class="tab-btn" data-category="dairy">Sữa & Bơ</button>
         </div>
 
-        <div class="product-grid" id="product-grid"></div>
+        <div class="shop-layout">
+            <div class="product-grid" id="product-grid"></div>
+            <aside class="cart-panel">
+                <div class="cart-header">
+                    <h3>Giỏ hàng</h3>
+                    <p class="cart-summary">Bạn có <strong id="cart-count">0</strong> sản phẩm trong giỏ.</p>
+                </div>
+                <div id="cart-list"></div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <div class="cart-total-row">
+                            <span>Tổng số lượng:</span>
+                            <strong id="cart-total">0</strong>
+                        </div>
+                        <div class="cart-total-row">
+                            <span>Tổng tiền:</span>
+                            <strong id="cart-amount">0đ</strong>
+                        </div>
+                    </div>
+                    <div class="cart-footer-actions">
+                        <button type="button" class="btn-shop-now btn-checkout" id="checkout-btn">Thanh toán</button>
+                        <button type="button" class="btn-shop-now btn-clear-cart" id="clear-cart-btn">Xóa giỏ hàng</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <footer>

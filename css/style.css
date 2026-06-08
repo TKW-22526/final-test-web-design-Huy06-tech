@@ -230,10 +230,185 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 /* Grid sản phẩm */
+.shop-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) 380px;
+    gap: 2rem;
+    align-items: start;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 2rem;
+}
+
+.cart-panel {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    min-height: 320px;
+}
+
+.cart-header {
+    margin-bottom: 1rem;
+}
+
+.cart-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.35rem;
+}
+
+.cart-summary {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+#cart-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 0.85rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 0.9rem;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.cart-item-info {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.cart-item-info h4 {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.cart-item-info p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.cart-item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.qty-controls {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.qty-btn {
+    background: #ffffff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    color: #374151;
+    font-weight: 700;
+}
+
+.qty-btn:hover {
+    background: #f3f4f6;
+}
+
+.qty-value {
+    min-width: 28px;
+    text-align: center;
+    font-weight: 600;
+    color: #111827;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.cart-total {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 1rem;
+    color: #111827;
+    font-weight: 700;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cart-footer {
+    margin-top: 1rem;
+}
+
+.cart-footer-actions {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.btn-shop-now.btn-checkout {
+    width: 100%;
+    background-color: #ff7c08;
+}
+
+.btn-shop-now.btn-checkout:hover {
+    background-color: #e06900;
+}
+
+.cart-empty {
+    color: #6b7280;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.btn-shop-now.btn-clear-cart {
+    width: 100%;
+    background-color: #4b5563;
+    box-shadow: none;
+}
+
+.btn-shop-now.btn-clear-cart:hover {
+    background-color: #373f52;
+}
+
+@media (max-width: 1024px) {
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 .product-card {
@@ -275,6 +450,13 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 1.25rem;
 }
 
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
 .btn-detail {
     display: inline-block;
     border: 1px solid #ff7c08;
@@ -290,6 +472,24 @@ nav ul li a:hover, nav ul li a.active {
 .btn-detail:hover {
     background-color: #ff7c08;
     color: white;
+}
+
+.btn-add-cart {
+    display: inline-block;
+    background-color: #ff7c08;
+    color: white;
+    border: none;
+    padding: 0.45rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-add-cart:hover {
+    background-color: #e06900;
+    transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -345,7 +545,18 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 1.05rem;
     margin-bottom: 2.5rem;
 }
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
 
+.detail-actions .btn-shop-now {
+    padding: 0.65rem 1.8rem;
+    font-size: 0.95rem;
+}
 /* ==========================================================================
    6. CÁC TRANG NỘI DUNG TĨNH (GIOI-THIEU / LIEN-HE)
    ========================================================================== */
