@@ -534,16 +534,28 @@ function goToDetail(id) {
     }
 }
 
+// Fallback in-memory cart for GitHub Pages / localStorage issues
+let cartMemory = {};
+
 function getCart() {
     try {
-        return JSON.parse(localStorage.getItem('grocifyCart')) || {};
+        // Try localStorage first
+        const stored = localStorage.getItem('grocifyCart');
+        if (stored) return JSON.parse(stored);
     } catch (error) {
-        return {};
+        console.warn('localStorage unavailable, using memory storage');
     }
+    // Fallback to in-memory
+    return cartMemory || {};
 }
 
 function saveCart(cart) {
-    localStorage.setItem('grocifyCart', JSON.stringify(cart));
+    cartMemory = cart; // Always save to memory
+    try {
+        localStorage.setItem('grocifyCart', JSON.stringify(cart));
+    } catch (error) {
+        console.warn('Cannot save to localStorage, using memory only');
+    }
 }
 
 function formatPrice(value) {
@@ -655,7 +667,12 @@ function removeFromCart(productId) {
 }
 
 function clearCart() {
-    localStorage.removeItem('grocifyCart');
+    cartMemory = {}; // Clear memory
+    try {
+        localStorage.removeItem('grocifyCart');
+    } catch (error) {
+        console.warn('Cannot clear localStorage');
+    }
     renderCart();
 }
 
